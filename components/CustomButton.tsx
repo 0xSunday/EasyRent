@@ -3,7 +3,7 @@ import React, { MouseEventHandler } from "react";
 interface customBtn {
   title: string;
   containerStyles?: string;
-  handleClick?: MouseEventHandler<HTMLBodyElement>;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const CustomButton = ({ title, containerStyles, handleClick }: customBtn) => {
