@@ -1,5 +1,3 @@
-
-
 "use client";
 import React from "react";
 import CustomButton from "./CustomButton";
@@ -7,9 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../motion";
 import { Variants } from "framer-motion";
-
-
-
 
 const Hero = () => {
   const handleScroll = () => {
@@ -57,8 +52,8 @@ const Hero = () => {
               className="object-contain"
             />
           </div>
-          <div className="hero__image-overlay "></div>
         </div>
+        <div className="hero__image-overlay "></div>
       </div>
     </div>
   );
