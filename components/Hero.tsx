@@ -16,14 +16,14 @@ const Hero = () => {
     // console.log("hello sunil");
   };
   return (
-    <motion.div
+    <div
       className="hero"
-      initial="hidden"
-      whileInView="show"
-      variants={staggerContainer}
-      viewport={{ once: true, amount: 0.25 }}
+      // initial="hidden"
+      // whileInView="show"
+      // variants={staggerContainer}
+      // viewport={{ once: true, amount: 0.25 }}
     >
-      <motion.div className="flex-1 pt-36 padding-x">
+      <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Find, Book, or Rent a vehicle - Quickly and easily!
         </h1>
@@ -39,28 +39,28 @@ const Hero = () => {
           hover:font-bold hover:scale-110"
           handleClick={handleScroll}
         />
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         className="hero__image-container"
-        initial="hidden"
-        whileInView="show"
-        variants={fadeIn("left", "tween", 0.1, 1)}
-        viewport={{ once: true, amount: 0.25 }}
+        // initial="hidden"
+        // whileInView="show"
+        // variants={fadeIn("left", "tween", 0.1, 1)}
+        // viewport={{ once: true, amount: 0.25 }}
       >
-        <motion.div className="hero__image">
-          <motion.div>
+        <div className="hero__image">
+          <div>
             <Image
               src="/hero.png"
               alt="car image"
               fill
               className="object-contain"
             />
-          </motion.div>
+          </div>
           <div className="hero__image-overlay "></div>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 };
 
