@@ -1,15 +1,29 @@
+
+
 "use client";
 import React from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../motion";
+import { Variants } from "framer-motion";
+
+
+
 
 const Hero = () => {
   const handleScroll = () => {
     // console.log("hello sunil");
   };
   return (
-    <div className="hero">
-      <div className="flex-1 pt-36 padding-x">
+    <motion.div
+      className="hero"
+      initial="hidden"
+      whileInView="show"
+      variants={staggerContainer}
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <motion.div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Find, Book, or Rent a vehicle - Quickly and easily!
         </h1>
@@ -25,20 +39,28 @@ const Hero = () => {
           hover:font-bold hover:scale-110"
           handleClick={handleScroll}
         />
-      </div>
+      </motion.div>
 
-      <div className="hero__image-container">
-        <div className="hero__image">
-          <Image
-            src="/hero.png"
-            alt="car image"
-            fill
-            className="object-contain"
-          />
+      <motion.div
+        className="hero__image-container"
+        initial="hidden"
+        whileInView="show"
+        variants={fadeIn("left", "tween", 0.1, 1)}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <motion.div className="hero__image">
+          <motion.div>
+            <Image
+              src="/hero.png"
+              alt="car image"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
           <div className="hero__image-overlay "></div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
