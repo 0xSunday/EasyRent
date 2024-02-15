@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ClerkProvider, SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Easy Rent",
@@ -20,11 +21,19 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo5.png" />
       </head>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <ClerkProvider>
+        <body>
+          <SignedIn>
+            <Navbar />
+            {children}
+            <Footer />
+          </SignedIn>
+
+          <SignedOut>
+            <SignIn />
+          </SignedOut>
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
