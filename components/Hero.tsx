@@ -26,14 +26,15 @@ const Hero = () => {
           Streamline your vehicle rental experience with our effortless booking
           process.
         </p>
-
-        <CustomButton
-          title="Explore Vehicle"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10 border-[1px]
+        <a href={`#explore`}>
+          <CustomButton
+            title="Explore Vehicle"
+            containerStyles="bg-primary-blue text-white rounded-full mt-10 border-[1px]
           border-white hover:bg-blue-900  transition-all hover:border-blue-500
           hover:font-bold hover:scale-110"
-          handleClick={handleScroll}
-        />
+            handleClick={handleScroll}
+          />
+        </a>
       </div>
 
       <div

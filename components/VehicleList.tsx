@@ -5,7 +5,7 @@ import BookingModel from "./BookingModel";
 const VehicleList = ({ vehicles }: any) => {
   const [selectedVehicle, setSelectedVehicle] = useState<any>([]);
   return (
-    <div className="padding-x padding-y grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <div  className="padding-x padding-y grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
       {vehicles.map((gadi: any, id: number) => (
         <div
           onClick={() => {

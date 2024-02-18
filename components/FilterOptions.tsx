@@ -20,7 +20,10 @@ const FilterOptions = ({ originalVehicles, setVehicles, setOrder }: any) => {
   };
   // console.log(vehicleType);
   return (
-    <div className="padding-x padding-y flex gap-3 flex-col md:flex-row items-center justify-between">
+    <div
+      id="explore"
+      className="padding-x padding-y flex gap-3 flex-col md:flex-row items-center justify-between"
+    >
       <div>
         <h2 className=" text-3xl font-bold">Select vehicle</h2>
       </div>
