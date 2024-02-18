@@ -16,6 +16,9 @@ export const getVehicleList = async () => {
         updatedAt
         vehicleBrand
         vehicleType
+        image {
+          url
+        }
       }
     }
   `;
