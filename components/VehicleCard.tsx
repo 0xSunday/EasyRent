@@ -46,7 +46,7 @@ bg-white
             <div className="text-center text-gray-500">
               {gadi.vehicleType == "Bike" ? (
                 <>
-                  <FaGear  className="w-full text-[22px] mb-2" />
+                  <FaGear className="w-full text-[22px] mb-2" />
                   <h2 className="line-clamp-5 text-[14px] font-light">
                     {gadi.seat}
                   </h2>
