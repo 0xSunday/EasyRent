@@ -18,7 +18,7 @@ export default function Home() {
     const result: any = await getVehicleList();
     setVehicles(result?.vehicleS);
   };
-  console.log(vehicles);
+  // console.log(vehicles);
   return (
     <main className="overflow-hidden ">
       <Hero />

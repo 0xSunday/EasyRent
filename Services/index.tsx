@@ -23,7 +23,7 @@ export const getVehicleList = async () => {
     }
   `;
   const result = await request(
-    "https://api-ap-south-1.hygraph.com/v2/clsops88k059s01ume6p5ro2q/master",
+    "https://ap-south-1.cdn.hygraph.com/content/clsops88k059s01ume6p5ro2q/master",
     document
   );
   return result;

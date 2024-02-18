@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaGasPump } from "react-icons/fa6";
+import { FaGasPump, FaGear } from "react-icons/fa6";
 import { MdAirlineSeatReclineNormal } from "react-icons/md";
 import { PiSteeringWheelFill } from "react-icons/pi";
 import Tilt from "react-parallax-tilt";
@@ -44,10 +44,21 @@ bg-white
               </h2>
             </div>
             <div className="text-center text-gray-500">
-              <MdAirlineSeatReclineNormal className="w-full text-[22px] mb-2" />
-              <h2 className="line-clamp-5 text-[14px] font-light">
-                {gadi.seat} Seat
-              </h2>
+              {gadi.vehicleType == "Bike" ? (
+                <>
+                  <FaGear  className="w-full text-[22px] mb-2" />
+                  <h2 className="line-clamp-5 text-[14px] font-light">
+                    {gadi.seat}
+                  </h2>
+                </>
+              ) : (
+                <>
+                  <MdAirlineSeatReclineNormal className="w-full text-[22px] mb-2" />
+                  <h2 className="line-clamp-5 text-[14px] font-light">
+                    {gadi.seat} Seat
+                  </h2>
+                </>
+              )}
             </div>
             <div className=" text-center text-gray-500 ">
               <FaGasPump className="w-full text-[22px] mb-2" />
