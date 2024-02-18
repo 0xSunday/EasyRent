@@ -33,8 +33,8 @@ const FilterOptions = ({ originalVehicles, setVehicles, setOrder }: any) => {
           <option disabled selected>
             Price
           </option>
-          <option value={1}>High to Low</option>
           <option value={-1}>Low to High</option>
+          <option value={1}>High to Low</option>
         </select>
 
         <select
