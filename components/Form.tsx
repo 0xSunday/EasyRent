@@ -3,9 +3,13 @@ import { clerkClient } from "@clerk/nextjs";
 // import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
 
 // import { useUser } from "@clerk/nextjs";
+
+import toast from "react-hot-toast";
+
 import React, { useContext, useEffect, useState } from "react";
 
 function Form({ vehicle }: any) {
+   
   // let User;
   // const name = async () => {
   //   const userId = "my-user-id";
@@ -57,10 +61,9 @@ function Form({ vehicle }: any) {
     console.log(formValue);
     const resp = await createBooking(formValue);
     console.log(resp);
-    // if(resp)
-    // {
-    //   setShowToastMsg(true);
-    // }
+    if (resp) {
+      toast.success("Vehicle Booked!");
+    }
   };
 
   return (

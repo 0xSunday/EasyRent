@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ClerkProvider, SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Easy Rent",
@@ -28,7 +29,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </SignedIn>
-
+          <Toaster position="top-center" reverseOrder={false} />
           <SignedOut>
             <SignIn />
           </SignedOut>
